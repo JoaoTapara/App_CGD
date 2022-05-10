@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_data"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_bar_date"
+        android:title="@string/nav_data"/>
+
+    <item
+        android:id="@+id/nav_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav__bar_home_24"
+        android:title="@string/nav_home"/>
+
+    <item
+        android:id="@+id/nav_info"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_bar_info"
+        android:title="@string/nav_info"/>
+
+</menu>
