@@ -9,7 +9,7 @@ import android.os.Bundle;
 
 import com.example.app_cgd.databinding.ActivityTelaPrincipalBinding;
 
-public class Tela_Principal extends AppCompatActivity {
+public class Tela_Principal extends DrawerBase {
 
     public static String id_user;
     private ActivityTelaPrincipalBinding binding;
