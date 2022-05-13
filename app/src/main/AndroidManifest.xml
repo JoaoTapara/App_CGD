@@ -13,19 +13,30 @@
         android:theme="@style/Theme.App_CGD"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".main_drawer_header"
+            android:exported="false" />
+        <activity
+            android:name=".DrawerBase"
+            android:exported="false" />
+        <activity
             android:name=".Tela_Cadastro_login"
             android:exported="false" />
         <activity
             android:name=".Tela_Principal"
             android:exported="false" />
+
+
+
         <activity
             android:name=".Tela_Login"
-            android:exported="true">
+            android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
