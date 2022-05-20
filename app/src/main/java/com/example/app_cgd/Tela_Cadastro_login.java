@@ -32,36 +32,11 @@ public class Tela_Cadastro_login extends AppCompatActivity {
 
     }
 
-    public void clique_cadastro_login (View v){
-
-        String email = edt_email.getText().toString();
-        String senha = edt_senha.getText().toString();
-        String nome = edt_nome.getText().toString();
-        String cpf = edt_cpf.getText().toString();
-        String telefone_gestante = edt_telefone.getText().toString();
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Api.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        Api api = retrofit.create(Api.class);
-
-        //Faz a requisição para o servidor
-        Call<Usuario> call = api.cadastrar(nome, email, senha, cpf, telefone_gestante);
-        call.enqueue(new Callback<Usuario>() {
-            @Override
-            public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                Toast.makeText(getApplicationContext(), "Cadastro feito com sucesso", Toast.LENGTH_SHORT).show();
-                //finish();
-            }
-
-            @Override
-            public void onFailure(Call<Usuario> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
 
 
-    }
+
+
+
+
 
 }
