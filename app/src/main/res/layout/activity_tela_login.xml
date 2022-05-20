@@ -1,63 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fundo_login"
     tools:context=".Tela_Login">
 
-    <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ImageView
+        android:id="@+id/img_semi"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:background="@drawable/semi_circulo" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cartão Gestante"
+        android:fontFamily="@font/lemon"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"
+        android:textColor="#e0aaa8"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img_semi"
+        android:layout_marginTop="20dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="5dp"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/edt_email"
+            tools:layout_editor_absoluteX="35dp" />
 
-            <EditText
-                android:id="@+id/edt_email"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="160dp"
-                android:ems="10"
-                android:hint="Digite seu email"
-                android:inputType="textPersonName" />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/white"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/tv_senha" />
 
-            <EditText
-                android:id="@+id/edt_senha"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="40dp"
-                android:ems="10"
-                android:hint="Digite seu senha"
-                android:inputType="textPersonName"
-                tools:ignore="TouchTargetSizeCheck" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="5dp"
+            android:text="Senha"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/edt_senha" />
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="40dp"
-                android:onClick="clique_logar"
-                android:text="Logar" />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_senha"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/white"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/btn_logar" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="40dp"
-                android:onClick="clique_cadastro"
-                android:text="Cadastrar" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_logar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="30dp"
+            android:background="#e0aaa8"
+            android:text="Logar"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/lemon"
+            app:layout_constraintBottom_toTopOf="@+id/btn_criar_acesso"
+            tools:layout_editor_absoluteX="35dp" />
 
-        </LinearLayout>
-    </ScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_criar_acesso"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="80dp"
+            android:background="#e0aaa8"
+            android:text="Crie seu Acesso"
+            android:textColor="@color/white"
+            android:fontFamily="@font/lemon"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="parent" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
