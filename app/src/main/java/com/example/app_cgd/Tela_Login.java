@@ -7,10 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.app_cgd.DTO.Usuario;
-<<<<<<< Updated upstream
-=======
 import com.example.app_cgd.Fragments.Home_Fragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -18,13 +15,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
->>>>>>> Stashed changes
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Tela_Login extends AppCompatActivity {
 
@@ -41,63 +31,6 @@ public class Tela_Login extends AppCompatActivity {
 
     }
 
-    public void clique_logar(View v){
-
-        String email = edt_email.getText().toString();
-        String senha = edt_senha.getText().toString();
-
-        //monto a requisição
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Api.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        Api api = retrofit.create(Api.class);
-
-        //faz chamada no servidor
-
-        Call<Usuario> call = api.logar(email, senha);
-        call.enqueue(new Callback<Usuario>() {
-            @Override
-            public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                //pega a resposta do servidor
-                Usuario retorno = response.body();
-
-                //verifica se encontrou
-                if(retorno.getId_gestante().equals("0")){
-
-                    Toast.makeText(getApplicationContext(), "Email ou senha Invalido", Toast.LENGTH_SHORT).show();
-                    edt_senha.setText("");
-
-                    //finish();
-
-                }else {
-
-<<<<<<< Updated upstream
-                    String id_user = retorno.getId_gestante();
-                    Tela_Principal.id_user = id_user;
-=======
-
-                            Toast.makeText(Tela_Login.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
->>>>>>> Stashed changes
-
-
-                    Intent tela = new Intent(getApplicationContext(), Tela_Principal.class);
-                    startActivity(tela);
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Usuario> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-//        Intent tela = new Intent(getApplicationContext(), Tela_Cadastro_Cartao.class);
-//        startActivity(tela);
-
-    }
 
 
     public void clique_cadastro(View v){
