@@ -5,7 +5,48 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Usuario {
 
-    String id, email, senha, senha_conf, nome, telefone_gestante, cpf, resposta;
+    public static String id, email, senha, senha_conf, nome, telefone, cpf, resposta, dum, idade, peso;
+
+    public Usuario() {
+    }
+
+    public Usuario(String id, String email, String senha, String senha_conf, String nome, String telefone, String cpf, String resposta, String dum,String idade, String peso){
+        this.id = id;
+        this.email = email;
+        this.senha = senha;
+        this.senha_conf = senha_conf;
+        this.nome = nome;
+        this.telefone = telefone;
+        this.cpf = cpf;
+        this.resposta = resposta;
+        this.dum = dum;
+        this.idade = idade;
+        this.peso = peso;
+    }
+
+    public String getDum() {
+        return dum;
+    }
+
+    public void setDum(String dum) {
+        this.dum = dum;
+    }
+
+    public String getIdade() {
+        return idade;
+    }
+
+    public void setIdade(String idade) {
+        this.idade = idade;
+    }
+
+    public String getPeso() {
+        return peso;
+    }
+
+    public void setPeso(String peso) {
+        this.peso = peso;
+    }
 
     public String getId() {
         return id;
@@ -47,12 +88,12 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getTelefone_gestante() {
-        return telefone_gestante;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setTelefone_gestante(String telefone_gestante) {
-        this.telefone_gestante = telefone_gestante;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getCpf() {

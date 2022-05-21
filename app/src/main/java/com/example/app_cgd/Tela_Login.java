@@ -30,7 +30,7 @@ public class Tela_Login extends AppCompatActivity {
 
     private EditText edt_email, edt_senha;
 
-    private Button btn_Logar;
+    private Button btn_Logar, btn_acesso;
 
     private Usuario u;
 
@@ -42,6 +42,14 @@ public class Tela_Login extends AppCompatActivity {
         setContentView(R.layout.activity_tela_login);
 
         IniciarComponentes();
+
+        btn_acesso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Tela_Login.this, Tela_Cadastro_login.class));
+                finish();
+            }
+        });
 
 
         btn_Logar.setOnClickListener(new View.OnClickListener() {
@@ -81,10 +89,7 @@ public class Tela_Login extends AppCompatActivity {
 
                         }
                     }
-
-
                 });
-
     }
 
 
@@ -96,20 +101,24 @@ public class Tela_Login extends AppCompatActivity {
 
     }
 
-    public void clique_cadastro(View v){
-        Intent tela = new Intent(this, Tela_Cadastro_login.class);
-        startActivity(tela);
-    }
-
     private  void IniciarComponentes(){
 
         edt_email = findViewById(R.id.edt_email);
         edt_senha = findViewById(R.id.edt_senha);
 
         btn_Logar = findViewById(R.id.btn_logar);
+        btn_acesso = findViewById(R.id.btn_criar_acesso);
 
         mAuth = FirebaseAuth.getInstance();
 
     }
 
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        FirebaseUser usuarioAtual = FirebaseAuth.getInstance().getCurrentUser();
+//        if(usuarioAtual != null){
+//            startActivity(new Intent(getApplicationContext(), Tela_Principal.class));
+//        }
+//    }
 }
