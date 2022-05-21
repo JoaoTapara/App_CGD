@@ -61,49 +61,7 @@
             android:id="@+id/tv_senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/edt_email"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="160dp"
-                android:ems="10"
-                android:hint="Digite seu email"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/edt_senha"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="40dp"
-                android:ems="10"
-                android:hint="Digite seu senha"
-                android:inputType="textPersonName"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/btn_logar"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="40dp"
-                android:text="Logar" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="40dp"
-                android:onClick="clique_cadastro"
-                android:text="Cadastrar" />
-
-        </LinearLayout>
-    </ScrollView>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
+            android:orientation="vertical"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="35dp"
