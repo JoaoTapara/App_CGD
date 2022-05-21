@@ -15,7 +15,7 @@
             android:id="@+id/edt_nome"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:ems="10"
             android:hint="Digite seu nome"
             android:inputType="textPersonName" />
@@ -31,6 +31,15 @@
 
         <EditText
             android:id="@+id/edt_senha"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Digite uma senha"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edt_senha_conf"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
@@ -57,11 +66,10 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_cadastrar"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginTop="50dp"
-            android:onClick="clique_cadastro_login"
             android:text="Button" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "995993511766",
+    "firebase_url": "https://app-cgd-default-rtdb.firebaseio.com",
+    "project_id": "app-cgd",
+    "storage_bucket": "app-cgd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995993511766:android:1b5b4a596080050a9ed8f7",
+        "android_client_info": {
+          "package_name": "com.example.app_cgd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995993511766-c5dkp7m8qd3q9fp6co8etfamue4e6v6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUKUNJw-sJuNy3u9nIqgjW0tc4vj6CbaE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995993511766-c5dkp7m8qd3q9fp6co8etfamue4e6v6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
