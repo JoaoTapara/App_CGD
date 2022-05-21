@@ -26,7 +26,6 @@
             android:exported="false" />
 
 
-
         <activity
             android:name=".Tela_Login"
             android:exported="true" >
@@ -38,6 +37,10 @@
             </intent-filter>
 
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

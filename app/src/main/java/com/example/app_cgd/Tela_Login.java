@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.app_cgd.DTO.Usuario;
 
 import com.example.app_cgd.Fragments.Home_Fragment;
@@ -43,6 +42,7 @@ public class Tela_Login extends AppCompatActivity {
         setContentView(R.layout.activity_tela_login);
 
         IniciarComponentes();
+
 
         btn_Logar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +86,7 @@ public class Tela_Login extends AppCompatActivity {
                 });
 
     }
+
 
     private void ReceberDados() {
 

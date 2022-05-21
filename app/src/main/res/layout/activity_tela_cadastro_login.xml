@@ -4,12 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fundo_login"
     tools:context=".Tela_Cadastro_login">
 
-    <LinearLayout
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_email"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="5dp"
+        android:text="Email"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edt_email"
+        tools:layout_editor_absoluteX="35dp" />
 
         <EditText
             android:id="@+id/edt_nome"
@@ -20,23 +31,43 @@
             android:hint="Digite seu nome"
             android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/edt_email"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="Digite seu email"
-            android:inputType="textPersonName" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tv_senha" />
 
-        <EditText
-            android:id="@+id/edt_senha"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="Digite uma senha"
-            android:inputType="textPersonName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="5dp"
+        android:text="Senha"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edt_senha"
+         />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_senha"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tv_confirma_senha" />
+
 
         <EditText
             android:id="@+id/edt_senha_conf"
@@ -56,14 +87,98 @@
             android:hint="Digite seu cpf"
             android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/edt_telefone"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="Digite seu telefone"
-            android:inputType="textPersonName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_confirma_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="5dp"
+        android:text="Confirma_Senha"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edt_confirma_senha"
+        tools:layout_editor_absoluteX="35dp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_confirma_senha"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cpf" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_cpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="5dp"
+        android:text="CPF"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edt_cpf"
+        tools:layout_editor_absoluteX="35dp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_cpf"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tv_telefone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_telefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="5dp"
+        android:text="Telefone"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edt_telefone" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_telefone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/white"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cadastrar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="50dp"
+        android:background="#e0aaa8"
+        android:text="Cadastrar"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lemon"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent" />
+
 
         <Button
             android:id="@+id/btn_cadastrar"
@@ -72,4 +187,5 @@
             android:layout_marginTop="50dp"
             android:text="Button" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
