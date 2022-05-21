@@ -1,16 +1,24 @@
 package com.example.app_cgd;
 
+import static android.content.ContentValues.TAG;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.example.app_cgd.DTO.Usuario;
+
 import com.example.app_cgd.Fragments.Home_Fragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -18,24 +26,90 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Tela_Login extends AppCompatActivity {
 
+    private FirebaseAuth mAuth;
 
-    EditText edt_email, edt_senha;
+    private EditText edt_email, edt_senha;
+
+    private Button btn_Logar;
+
+    private Usuario u;
+
+    private String[] mensagens = {"Email ou senha invalido"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_login);
 
-        edt_email = (EditText)findViewById(R.id.edt_email);
-        edt_senha = (EditText)findViewById(R.id.edt_senha);
+        IniciarComponentes();
+
+
+        btn_Logar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ReceberDados();
+                Logar(v);
+
+            }
+        });
+
+    }
+
+    private void Logar(View v) {
+
+        mAuth.signInWithEmailAndPassword(u.getEmail(), u.getSenha())
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+
+
+                            FirebaseUser user = mAuth.getCurrentUser();
+
+
+                            startActivity(new Intent(Tela_Login.this,Tela_Principal.class));
+
+                        } else {
+
+                            Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
+                            snackbar.setBackgroundTint(Color.WHITE);
+                            snackbar.setTextColor(Color.BLACK);
+                            snackbar.show();
+
+                            edt_senha.setText("");
+
+                        }
+                    }
+
+
+                });
 
     }
 
 
+    private void ReceberDados() {
+
+        u = new Usuario();
+        u.setEmail(edt_email.getText().toString());
+        u.setSenha(edt_senha.getText().toString());
+
+    }
 
     public void clique_cadastro(View v){
         Intent tela = new Intent(this, Tela_Cadastro_login.class);
         startActivity(tela);
+    }
+
+    private  void IniciarComponentes(){
+
+        edt_email = findViewById(R.id.edt_email);
+        edt_senha = findViewById(R.id.edt_senha);
+
+        btn_Logar = findViewById(R.id.btn_logar);
+
+        mAuth = FirebaseAuth.getInstance();
+
     }
 
 }

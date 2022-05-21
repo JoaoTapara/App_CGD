@@ -1,15 +1,18 @@
 package com.example.app_cgd.DTO;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Usuario {
 
-    String id_gestante, email, senha, nome, telefone_gestante, cpf, resposta;
+    String id, email, senha, senha_conf, nome, telefone_gestante, cpf, resposta;
 
-    public String getId_gestante() {
-        return id_gestante;
+    public String getId() {
+        return id;
     }
 
-    public void setId_gestante(String id_gestante) {
-        this.id_gestante = id_gestante;
+    public void setId(String id_gestante) {
+        this.id = id_gestante;
     }
 
     public String getEmail() {
@@ -26,6 +29,14 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getSenha_conf() {
+        return senha_conf;
+    }
+
+    public void setSenha_conf(String senha_conf) {
+        this.senha_conf = senha_conf;
     }
 
     public String getNome() {
@@ -58,5 +69,12 @@ public class Usuario {
 
     public void setResposta(String resposta) {
         this.resposta = resposta;
+    }
+
+    public void salvar(){
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        reference.child("usuarios").child(getId()).setValue(this);
+
     }
 }
