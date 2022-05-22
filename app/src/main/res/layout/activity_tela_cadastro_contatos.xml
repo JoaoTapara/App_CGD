@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/fundo_padrao"
+    tools:context=".Tela_Cadastro_Contatos">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="300dp"
+            android:background="@drawable/container_contatos"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Adicionar Contatos"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:text="Adicione abaixo os contatos para emergênicias e para receber notificações"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:text="1ºContato"
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/edt_nome_contato1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/container_edt_contatos"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="20dp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="Telefone"
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/edt_telefone_contato1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/container_edt_contatos"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="20dp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="2ºContato"
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/edt_nome_contato2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/container_edt_contatos"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="20dp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="Telefone"
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/edt_telefone_contato2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/container_edt_contatos"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cadastrar_contato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/container_botao_login"
+                android:onClick="cadastrar_contato"
+                android:padding="25dp"
+                android:text="Cadastrar"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
