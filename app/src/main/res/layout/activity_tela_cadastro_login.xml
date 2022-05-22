@@ -30,7 +30,8 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        android:background="@drawable/edt_primario"
+        android:padding="10dp"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/tv_cpf" />
 
@@ -55,7 +56,8 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        android:background="@drawable/edt_primario"
+        android:padding="10dp"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/tv_telefone" />
 
@@ -80,7 +82,8 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="30dp"
-        android:background="@color/white"
+        android:background="@drawable/edt_primario"
+        android:padding="10dp"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btn_proximo" />
 
@@ -91,7 +94,7 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="50dp"
-        android:background="#e0aaa8"
+        android:background="@drawable/btn_primario"
         android:text="Proxima Pagina"
         android:textColor="@color/white"
         android:fontFamily="@font/lemon"

@@ -30,7 +30,8 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        android:background="@drawable/edt_primario"
+        android:padding="10dp"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/tv_idade" />
 
@@ -55,7 +56,8 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        android:background="@drawable/edt_primario"
+        android:padding="10dp"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/tv_peso" />
 
@@ -80,7 +82,8 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="30dp"
-        android:background="@color/white"
+        android:background="@drawable/edt_primario"
+        android:padding="10dp"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/btn_cadastrar" />
 
@@ -91,7 +94,7 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="50dp"
-        android:background="#e0aaa8"
+        android:background="@drawable/btn_primario"
         android:text="Cadastrar"
         android:textColor="@color/white"
         android:fontFamily="@font/lemon"

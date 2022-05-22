@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Joao_Tapara/AndroidStudioProjects/App_CGD/app/src/main/res/drawable/btn_primario.xml" value="0.249" />
+        <entry key="..\:/Users/Joao_Tapara/AndroidStudioProjects/App_CGD/app/src/main/res/drawable/edt_primario.xml" value="0.249" />
         <entry key="..\:/Users/Joao_Tapara/AndroidStudioProjects/App_CGD/app/src/main/res/layout/activity_tela_cadastro_login.xml" value="0.25" />
-        <entry key="..\:/Users/Joao_Tapara/AndroidStudioProjects/App_CGD/app/src/main/res/layout/activity_tela_login.xml" value="0.11354166666666667" />
+        <entry key="..\:/Users/Joao_Tapara/AndroidStudioProjects/App_CGD/app/src/main/res/layout/activity_tela_cadastro_login_tela2.xml" value="0.2609375" />
+        <entry key="..\:/Users/Joao_Tapara/AndroidStudioProjects/App_CGD/app/src/main/res/layout/activity_tela_cadastro_login_tela3.xml" value="0.2609375" />
+        <entry key="..\:/Users/Joao_Tapara/AndroidStudioProjects/App_CGD/app/src/main/res/layout/activity_tela_login.xml" value="0.33" />
+        <entry key="..\:/Users/Joao_Tapara/AndroidStudioProjects/App_CGD/app/src/main/res/layout/activity_tela_principal.xml" value="0.20471014492753623" />
         <entry key="..\:/Users/Joao_Tapara/Documents/App_CGD/app/src/main/res/drawable/ic_nav__bar_home_24.xml" value="0.1245" />
         <entry key="..\:/Users/Joao_Tapara/Documents/App_CGD/app/src/main/res/drawable/ic_nav_bar_date.xml" value="0.1245" />
         <entry key="..\:/Users/Joao_Tapara/Documents/App_CGD/app/src/main/res/drawable/teste.xml" value="0.14" />
