@@ -12,5 +12,4 @@
         android:layout_gravity="center"
         android:src="@drawable/ic_nav__bar_home_24"/>
 
-
 </FrameLayout>
