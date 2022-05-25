@@ -9,21 +9,33 @@
         android:id="@+id/nav_home"
         android:name="com.example.app_cgd.Fragments.Home_Fragment"
         android:label="fragment_home_"
-        tools:layout="@layout/fragment_home_" />
+        tools:layout="@layout/fragment_home_" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_data"
+            app:destination="@id/nav_data" />
+    </fragment>
 
 
     <fragment
         android:id="@+id/nav_data"
         android:name="com.example.app_cgd.Fragments.Date_Fragment"
         android:label="fragment_date_"
-        tools:layout="@layout/fragment_date_" />
+        tools:layout="@layout/fragment_date_" >
+        <action
+            android:id="@+id/action_nav_data_to_nav_info"
+            app:destination="@id/nav_info" />
+    </fragment>
 
 
     <fragment
         android:id="@+id/nav_info"
         android:name="com.example.app_cgd.Fragments.Info_Fragment"
         android:label="fragment_info_"
-        tools:layout="@layout/fragment_info_" />
+        tools:layout="@layout/fragment_info_" >
+        <action
+            android:id="@+id/action_nav_info_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 
 
 </navigation>

@@ -113,6 +113,7 @@ public class Tela_Login extends AppCompatActivity {
 
     }
 
+
 //    @Override
 //    protected void onStart() {
 //        super.onStart();
@@ -121,6 +122,5 @@ public class Tela_Login extends AppCompatActivity {
 //            startActivity(new Intent(getApplicationContext(), Tela_Principal.class));
 //        }
 //    }
-
 
 }
