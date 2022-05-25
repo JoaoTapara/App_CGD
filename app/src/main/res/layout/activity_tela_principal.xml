@@ -20,7 +20,6 @@
         app:navGraph="@navigation/nav_main"/>
 
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         style="@style/Widget.App.BottomNavigationView"
@@ -30,7 +29,6 @@
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_navigation_menu"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/nav_host_fragment"
          />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

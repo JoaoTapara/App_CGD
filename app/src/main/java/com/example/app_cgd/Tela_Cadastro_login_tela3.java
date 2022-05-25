@@ -42,9 +42,9 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
     private String[] mensagens = {"Preencha todos os campos","Cadastro feito com sucesso","Deu Bosta"};
 
-    private DatePickerDialog datePickerDialog;
-
     String usuarioID;
+
+    private DatePickerDialog datePickerDialog;
 
     public Tela_Cadastro_login_tela3() {
     }
@@ -83,7 +83,6 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
         String dum = dpk_dum.getText().toString();
         String idade = edt_idade.getText().toString();
         String peso = edt_peso.getText().toString();
-
         DadosUsuarios.dum = dum;
         DadosUsuarios.idade = idade;
         DadosUsuarios.peso = peso;
@@ -92,7 +91,6 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
         u.setDum(dpk_dum.getText().toString());
         u.setIdade(edt_idade.getText().toString());
         u.setPeso(edt_peso.getText().toString());
-
 
 
         if(u.getDum().isEmpty() || u.getIdade().isEmpty() || u.getPeso().isEmpty()){
@@ -158,19 +156,6 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
                 });
     }
 
-    private void IniciarComponente(){
-
-
-        dpk_dum = findViewById(R.id.dpk_dum);
-
-        edt_idade = findViewById(R.id.edt_idade);
-        edt_peso = findViewById(R.id.edt_peso);
-        btn_cadastrar = findViewById(R.id.btn_cadastrar);
-        mAuth = FirebaseAuth.getInstance();
-
-
-    }
-
     private String getTodaysDate(){
 
         Calendar cal = Calendar.getInstance();
@@ -216,6 +201,16 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
         datePickerDialog.show();
 
+    }
+
+    private void IniciarComponente(){
+
+        dpk_dum = findViewById(R.id.dpk_dum);
+
+        edt_idade = findViewById(R.id.edt_idade);
+        edt_peso = findViewById(R.id.edt_peso);
+        btn_cadastrar = findViewById(R.id.btn_cadastrar);
+        mAuth = FirebaseAuth.getInstance();
     }
 
     private void Logar(){
