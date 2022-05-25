@@ -5,12 +5,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Usuario {
 
-    public static String id, email, senha, senha_conf, nome, telefone, cpf, resposta, dum, idade, peso;
+    public static String id, email, senha, senha_conf, nome, telefone, cpf, resposta, dum, dpp, idade, peso;
 
     public Usuario() {
     }
 
-    public Usuario(String id, String email, String senha, String senha_conf, String nome, String telefone, String cpf, String resposta, String dum,String idade, String peso){
+    public Usuario(String id, String email, String senha, String senha_conf, String nome, String telefone, String cpf, String resposta, String dum, String dpp,String idade, String peso){
         this.id = id;
         this.email = email;
         this.senha = senha;
@@ -22,6 +22,15 @@ public class Usuario {
         this.dum = dum;
         this.idade = idade;
         this.peso = peso;
+        this.dpp = dpp;
+    }
+
+    public static String getDpp() {
+        return dpp;
+    }
+
+    public static void setDpp(String dpp) {
+        Usuario.dpp = dpp;
     }
 
     public String getDum() {
