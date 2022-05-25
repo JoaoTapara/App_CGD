@@ -1,10 +1,13 @@
 package com.example.app_cgd;
 
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -23,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.internal.bind.DateTypeAdapter;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,10 +37,12 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
     private Usuario u;
 
-    private EditText edt_dum, edt_idade, edt_peso;
-    private Button btn_cadastrar;
+    private EditText  edt_idade, edt_peso;
+    private Button btn_cadastrar, dpk_dum;
 
     private String[] mensagens = {"Preencha todos os campos","Cadastro feito com sucesso","Deu Bosta"};
+
+    private DatePickerDialog datePickerDialog;
 
     String usuarioID;
 
@@ -48,7 +54,18 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastro_login_tela3);
 
+        initDatePiker();
         IniciarComponente();
+        dpk_dum.setText(getTodaysDate());
+
+        dpk_dum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openDatePiker(v);
+
+            }
+        });
 
         btn_cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,17 +80,19 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
     private void RecuperaDados(View v) {
 
 
-        String dum = edt_dum.getText().toString();
+        String dum = dpk_dum.getText().toString();
         String idade = edt_idade.getText().toString();
         String peso = edt_peso.getText().toString();
+
         DadosUsuarios.dum = dum;
         DadosUsuarios.idade = idade;
         DadosUsuarios.peso = peso;
 
         u = new Usuario();
-        u.setDum(edt_dum.getText().toString());
+        u.setDum(dpk_dum.getText().toString());
         u.setIdade(edt_idade.getText().toString());
         u.setPeso(edt_peso.getText().toString());
+
 
 
         if(u.getDum().isEmpty() || u.getIdade().isEmpty() || u.getPeso().isEmpty()){
@@ -141,11 +160,62 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
     private void IniciarComponente(){
 
-        edt_dum = findViewById(R.id.edt_dum);
+
+        dpk_dum = findViewById(R.id.dpk_dum);
+
         edt_idade = findViewById(R.id.edt_idade);
         edt_peso = findViewById(R.id.edt_peso);
         btn_cadastrar = findViewById(R.id.btn_cadastrar);
         mAuth = FirebaseAuth.getInstance();
+
+
+    }
+
+    private String getTodaysDate(){
+
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        month = month + 1;
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        return makeDateString(day, month, year);
+
+    }
+
+    private void initDatePiker() {
+
+        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int day) {
+
+                month = month+1;
+                String date = makeDateString(day, month, year);
+                dpk_dum.setText(date);
+            }
+        };
+
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+
+        int style = AlertDialog.THEME_DEVICE_DEFAULT_DARK;
+
+        datePickerDialog = new DatePickerDialog(this, style, dateSetListener, year, month, day);
+        datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
+
+    }
+
+    private String makeDateString(int day, int month, int year) {
+
+        return day + "/" + month + "/" + year;
+
+    }
+
+    private void openDatePiker(View v) {
+
+        datePickerDialog.show();
+
     }
 
     private void Logar(){
