@@ -27,14 +27,11 @@
             android:name=".Tela_Cadastro_login_tela2"
             android:exported="false" />
         <activity
-            android:name=".Tela_Login"
-            android:exported="false" />
-        <activity
             android:name=".Tela_Principal"
             android:exported="false" />
         <activity
             android:name=".Tela_Cadastro_login_tela3"
-            android:exported="false" >
+            android:exported="false" />
         
           <activity
             android:name=".Tela_Login"
