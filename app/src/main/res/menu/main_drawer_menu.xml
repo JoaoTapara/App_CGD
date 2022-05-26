@@ -4,21 +4,25 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_turned"
+            android:id="@+id/nav_favoritos"
             android:icon="@drawable/ic_turned"
             android:title="Favoritos"
             />
 
         <item
-            android:id="@+id/nav_baseline"
+            android:id="@+id/nav_pdf"
             android:icon="@drawable/ic_baseline"
             android:title="PDF"
             />
 
         <item
-            android:id="@+id/nav_settings"
+            android:id="@+id/nav_configuracao"
             android:icon="@drawable/ic_settings"
             android:title="Configurações"
+            />
+        <item
+            android:id="@+id/nav_deslogar"
+            android:title="Deslogar"
             />
 
 

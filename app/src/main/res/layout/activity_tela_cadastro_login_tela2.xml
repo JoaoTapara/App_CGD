@@ -9,22 +9,22 @@
 
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_email"
+        android:id="@+id/tv_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="5dp"
-        android:text="Email"
+        android:text="Nome"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edt_email"
+        app:layout_constraintBottom_toTopOf="@+id/edt_nome"
         tools:layout_editor_absoluteX="35dp" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edt_email"
+        android:id="@+id/edt_nome"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="35dp"
@@ -32,7 +32,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/edt_primario"
         android:padding="10dp"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/tv_cpf" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -42,15 +42,15 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="5dp"
-        android:text="Senha"
+        android:text="CPF"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edt_senha"
+        app:layout_constraintBottom_toTopOf="@+id/edt_cpf"
         tools:layout_editor_absoluteX="35dp" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edt_senha"
+        android:id="@+id/edt_cpf"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="35dp"
@@ -58,7 +58,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/edt_primario"
         android:padding="10dp"
-        android:inputType="textPassword"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/tv_telefone" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -69,14 +69,14 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="5dp"
-        android:text="Confirmar Senha"
+        android:text="Telefone"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edt_confirma_senha" />
+        app:layout_constraintBottom_toTopOf="@+id/edt_telefone" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edt_confirma_senha"
+        android:id="@+id/edt_telefone"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="35dp"
@@ -84,11 +84,11 @@
         android:layout_marginBottom="30dp"
         android:background="@drawable/edt_primario"
         android:padding="10dp"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btn_proximo" />
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_proximo2" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_proximo"
+        android:id="@+id/btn_proximo2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="35dp"

@@ -9,22 +9,49 @@
 
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_email"
+        android:id="@+id/tv_dum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="5dp"
-        android:text="Email"
-        android:inputType="textEmailAddress"
+        android:text="Data da Ultima Menstruação"
+        android:inputType="date"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edt_email"
+        app:layout_constraintBottom_toTopOf="@+id/dpk_dum"
+        tools:layout_editor_absoluteX="35dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dpk_dum"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edt_primario"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/tv_idade" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_idade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="5dp"
+        android:text="Idade"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edt_idade"
         tools:layout_editor_absoluteX="35dp" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edt_email"
+        android:id="@+id/edt_idade"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="35dp"
@@ -32,51 +59,25 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/edt_primario"
         android:padding="10dp"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/tv_cpf" />
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tv_peso" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_cpf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="5dp"
-        android:text="Senha"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edt_senha"
-        tools:layout_editor_absoluteX="35dp" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edt_senha"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/edt_primario"
-        android:padding="10dp"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/tv_telefone" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_telefone"
+        android:id="@+id/tv_peso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="5dp"
-        android:text="Confirmar Senha"
+        android:text="Peso"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edt_confirma_senha" />
+        app:layout_constraintBottom_toTopOf="@+id/edt_peso" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edt_confirma_senha"
+        android:id="@+id/edt_peso"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="35dp"
@@ -84,18 +85,18 @@
         android:layout_marginBottom="30dp"
         android:background="@drawable/edt_primario"
         android:padding="10dp"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btn_proximo" />
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cadastrar" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_proximo"
+        android:id="@+id/btn_cadastrar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/btn_primario"
-        android:text="Proxima Pagina"
+        android:text="Cadastrar"
         android:textColor="@color/white"
         android:fontFamily="@font/lemon"
         android:textSize="22sp"

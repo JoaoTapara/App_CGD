@@ -30,10 +30,9 @@ public class Tela_Principal extends DrawerBase {
 
     }
 
-    private  void initNavigation(){
+    private void initNavigation(){
 
-        navHostFragment
-                = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
         navController = navHostFragment.getNavController();
         NavigationUI.setupWithNavController(binding.bottomNavigation, navController);
     }

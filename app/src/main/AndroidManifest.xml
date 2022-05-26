@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.app_cgd">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,6 +12,9 @@
         android:theme="@style/Theme.App_CGD"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".FavoritosActivity"
+            android:exported="false" />
+        <activity
             android:name=".main_drawer_header"
             android:exported="false" />
         <activity
@@ -22,20 +24,27 @@
             android:name=".Tela_Cadastro_login"
             android:exported="false" />
         <activity
-            android:name=".Tela_Principal"
+            android:name=".Tela_Cadastro_login_tela2"
             android:exported="false" />
-
-
         <activity
             android:name=".Tela_Login"
-            android:exported="true" >
+            android:exported="false" />
+        <activity
+            android:name=".Tela_Principal"
+            android:exported="false" />
+        <activity
+            android:name=".Tela_Cadastro_login_tela3"
+            android:exported="false" >
+        
+          <activity
+            android:name=".Tela_Login"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data
