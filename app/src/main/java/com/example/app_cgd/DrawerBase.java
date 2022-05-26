@@ -24,7 +24,7 @@ public class DrawerBase extends AppCompatActivity implements NavigationView.OnNa
     public void setContentView(View view) {
 
         drawerLayout = (DrawerLayout)getLayoutInflater().inflate(R.layout.activity_drawer_base, null);
-        FrameLayout container = drawerLayout.findViewById(R.id.aciqivityConteiner);
+        FrameLayout container = drawerLayout.findViewById(R.id.activityContainer);
         container.addView(view);
 
         super.setContentView(drawerLayout);
