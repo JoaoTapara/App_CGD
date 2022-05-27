@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_degrade"
+    tools:context=".Tela_de_Agendamento">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Agende sua Consulta"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Selecione o dia para a sua consulta "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <CalendarView
+                android:id="@+id/calendario_dia_consulta"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Selecione um horario para a Consulta "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/spn_horario_consulta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:backgroundTint="@color/white"
+                android:backgroundTintMode="multiply"
+                android:padding="18dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_agendar_consulta"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/btn_primario"
+                android:fontFamily="@font/lemon"
+                android:text="Agendar Consulta"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
