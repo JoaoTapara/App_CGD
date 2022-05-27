@@ -25,11 +25,11 @@ public class Usuario {
         this.dpp = dpp;
     }
 
-    public static String getDpp() {
+    public  String getDpp() {
         return dpp;
     }
 
-    public static void setDpp(String dpp) {
+    public  void setDpp(String dpp) {
         Usuario.dpp = dpp;
     }
 
