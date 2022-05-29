@@ -9,7 +9,11 @@
         android:id="@+id/nav_home"
         android:name="com.example.app_cgd.Fragments.Home_Fragment"
         android:label="fragment_home_"
-        tools:layout="@layout/fragment_home_" />
+        tools:layout="@layout/fragment_home_" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_data"
+            app:destination="@id/nav_data" />
+    </fragment>
 
 
     <fragment
@@ -17,6 +21,10 @@
         android:name="com.example.app_cgd.Fragments.Medico_Fragment"
         android:label="fragment_date_"
         tools:layout="@layout/fragment_medico_" />
+        <action
+            android:id="@+id/action_nav_data_to_nav_info"
+            app:destination="@id/nav_info" />
+    </fragment>
 
 
     <fragment
@@ -24,6 +32,11 @@
         android:name="com.example.app_cgd.Fragments.Perfil_Fragment"
         android:label="fragment_info_"
         tools:layout="@layout/fragment_perfil_" />
+        <action
+            android:id="@+id/action_nav_info_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
 
 
 </navigation>

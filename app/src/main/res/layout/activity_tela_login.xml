@@ -54,8 +54,9 @@
             android:layout_marginRight="35dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/edt_primario"
-            android:inputType="text"
+            android:textColor="@color/black"
             android:padding="10dp"
+            android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/tv_senha" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -81,8 +82,9 @@
             android:layout_marginRight="35dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/edt_primario"
-            android:inputType="textPassword"
+            android:textColor="@color/black"
             android:padding="10dp"
+            android:inputType="textPassword"
             app:layout_constraintBottom_toTopOf="@+id/btn_logar" />
 
         <androidx.appcompat.widget.AppCompatButton

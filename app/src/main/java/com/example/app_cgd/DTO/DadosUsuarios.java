@@ -11,6 +11,7 @@ public class DadosUsuarios {
     public static String cpf;
     public static String resposta;
     public static String dum;
+    public static String dpp;
     public static String idade;
     public static String peso;
 }
