@@ -1,17 +1,21 @@
 package com.example.app_cgd;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.Toast;
 import com.example.app_cgd.DTO.Usuario;
 
+import com.example.app_cgd.Fragments.Home_Fragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
@@ -103,7 +107,7 @@ public class Tela_Login extends AppCompatActivity {
         edt_senha = findViewById(R.id.edt_senha);
 
         btn_Logar = findViewById(R.id.btn_logar);
-        btn_acesso = findViewById(R.id.btn_agendar_consulta);
+        btn_acesso = findViewById(R.id.btn_criar_acesso);
 
         mAuth = FirebaseAuth.getInstance();
 

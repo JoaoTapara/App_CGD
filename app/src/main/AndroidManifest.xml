@@ -12,11 +12,7 @@
         android:theme="@style/Theme.App_CGD"
         android:usesCleartextTraffic="true">
         <activity
-
-            android:name=".Tela_de_Agendamento"
-
             android:name=".FavoritosActivity"
-
             android:exported="false" />
         <activity
             android:name=".main_drawer_header"
