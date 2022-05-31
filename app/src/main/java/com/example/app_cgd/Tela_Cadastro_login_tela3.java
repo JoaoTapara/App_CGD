@@ -219,7 +219,8 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
     private String makeDateString(int day, int month, int year) {
 
-        return day + "/" + month + "/" + year;
+        String data_dev = String.format("%02d", day) + "/" + String.format("%02d", month) + "/" + year;
+        return data_dev;
 
     }
 
@@ -312,7 +313,8 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
     private String Makedpp(int dia_dpp, int mes_dpp, int ano_dpp){
 
-        return dia_dpp + "/" + mes_dpp + "/" + ano_dpp;
+        String data_dev = String.format("%02d", dia_dpp) + "/" + String.format("%02d", mes_dpp) + "/" + ano_dpp;
+        return data_dev;
 
     }
 
