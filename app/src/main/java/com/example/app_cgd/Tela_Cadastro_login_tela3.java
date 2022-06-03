@@ -47,7 +47,7 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
     private EditText  edt_idade, edt_peso;
     private Button btn_cadastrar, dpk_dum;
-    private TextView tv_dum;
+
 
     private String[] mensagens = {"Preencha todos os campos","Cadastro feito com sucesso","Deu Bosta"};
 
@@ -305,7 +305,7 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
 
         dpp = Makedpp(dia_dpp, mes_dpp, ano_dpp);
-        Toast.makeText(this, "dpp" + dpp, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, dpp, Toast.LENGTH_SHORT).show();
 
         u = new Usuario();
         u.setDpp(dpp);
@@ -324,7 +324,6 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
         dpk_dum = findViewById(R.id.dpk_dum);
 
-        tv_dum = findViewById(R.id.tv_dum);
         edt_idade = findViewById(R.id.edt_idade);
         edt_peso = findViewById(R.id.edt_peso);
         btn_cadastrar = findViewById(R.id.btn_cadastrar);

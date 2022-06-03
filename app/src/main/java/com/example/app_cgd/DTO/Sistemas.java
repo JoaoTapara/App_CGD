@@ -4,5 +4,7 @@ public class Sistemas {
 
     public  static int dia, mes, ano;
 
+    public static String data_dum;
+
 
 }
