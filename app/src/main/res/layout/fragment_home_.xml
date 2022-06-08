@@ -1,15 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_padrao"
     tools:context=".Fragments.Home_Fragment">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_nav__bar_home_24"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_txdia"
+        android:text="dia:"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_dia"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_tx_mes"
+        android:text="Mes:"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:orientation="vertical" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_mes"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="190dp"
+        android:orientation="vertical" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_txano"
+        android:text="ANO:"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:orientation="vertical" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_ano"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="320dp"
+        android:orientation="vertical"
+
+        />
 
 </FrameLayout>

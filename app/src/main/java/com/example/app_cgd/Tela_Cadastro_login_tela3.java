@@ -26,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.internal.bind.DateTypeAdapter;
 
@@ -47,7 +48,7 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
     private EditText  edt_idade, edt_peso;
     private Button btn_cadastrar, dpk_dum;
-    private TextView tv_dum;
+
 
     private String[] mensagens = {"Preencha todos os campos","Cadastro feito com sucesso","Deu Bosta"};
 
@@ -75,9 +76,6 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
             public void onClick(View v) {
 
                 openDatePiker(v);
-
-
-
             }
         });
 
@@ -200,6 +198,11 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
                 Sistemas.ano = ano;
 
                 CalculaDpp();
+
+                u = new Usuario();
+                u.setDia_dum(dia);
+                u.setMes_dum(mes);
+                u.setAno_dum(ano);
             }
         };
 
@@ -305,7 +308,7 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
 
         dpp = Makedpp(dia_dpp, mes_dpp, ano_dpp);
-        Toast.makeText(this, "dpp" + dpp, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, dpp, Toast.LENGTH_SHORT).show();
 
         u = new Usuario();
         u.setDpp(dpp);
@@ -318,13 +321,10 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
     }
 
-
-
     private void IniciarComponente(){
 
         dpk_dum = findViewById(R.id.dpk_dum);
 
-        tv_dum = findViewById(R.id.tv_dum);
         edt_idade = findViewById(R.id.edt_idade);
         edt_peso = findViewById(R.id.edt_peso);
         btn_cadastrar = findViewById(R.id.btn_cadastrar);
@@ -334,4 +334,5 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
     private void Logar(){
         startActivity(new Intent(getApplicationContext(), Tela_Login.class));
     }
+
 }
