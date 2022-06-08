@@ -7,10 +7,13 @@ public class Usuario {
 
     public static String id, email, senha, senha_conf, nome, telefone, cpf, resposta, dum, dpp, idade, peso;
 
+
+    public static int dia_dum, mes_dum, ano_dum;
+
     public Usuario() {
     }
 
-    public Usuario(String id, String email, String senha, String senha_conf, String nome, String telefone, String cpf, String resposta, String dum, String dpp,String idade, String peso){
+    public Usuario(String id, String email, String senha, String senha_conf, String nome, String telefone, String cpf, String resposta, String dum, String dpp,String idade, String peso, int dia_dum, int mes_dum, int ano_dum){
         this.id = id;
         this.email = email;
         this.senha = senha;
@@ -23,6 +26,33 @@ public class Usuario {
         this.idade = idade;
         this.peso = peso;
         this.dpp = dpp;
+        this.dia_dum = dia_dum;
+        this.mes_dum = mes_dum;
+        this.ano_dum = ano_dum;
+    }
+
+    public int getDia_dum() {
+        return dia_dum;
+    }
+
+    public void setDia_dum(int dia_dum) {
+        this.dia_dum = dia_dum;
+    }
+
+    public int getMes_dum() {
+        return mes_dum;
+    }
+
+    public void setMes_dum(int mes_dum) {
+        this.mes_dum = mes_dum;
+    }
+
+    public int getAno_dum() {
+        return ano_dum;
+    }
+
+    public void setAno_dum(int ano_dum) {
+        this.ano_dum = ano_dum;
     }
 
     public  String getDpp() {
@@ -30,7 +60,7 @@ public class Usuario {
     }
 
     public  void setDpp(String dpp) {
-        Usuario.dpp = dpp;
+        this.dpp = dpp;
     }
 
     public String getDum() {

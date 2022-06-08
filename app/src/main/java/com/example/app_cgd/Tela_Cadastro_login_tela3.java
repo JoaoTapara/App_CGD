@@ -26,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.internal.bind.DateTypeAdapter;
 
@@ -75,9 +76,6 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
             public void onClick(View v) {
 
                 openDatePiker(v);
-
-
-
             }
         });
 
@@ -200,6 +198,11 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
                 Sistemas.ano = ano;
 
                 CalculaDpp();
+
+                u = new Usuario();
+                u.setDia_dum(dia);
+                u.setMes_dum(mes);
+                u.setAno_dum(ano);
             }
         };
 
@@ -318,8 +321,6 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
 
     }
 
-
-
     private void IniciarComponente(){
 
         dpk_dum = findViewById(R.id.dpk_dum);
@@ -333,4 +334,5 @@ public class Tela_Cadastro_login_tela3 extends AppCompatActivity {
     private void Logar(){
         startActivity(new Intent(getApplicationContext(), Tela_Login.class));
     }
+
 }

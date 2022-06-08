@@ -10,10 +10,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.app_cgd.DTO.Sistemas;
 import com.example.app_cgd.DTO.Usuario;
 import com.example.app_cgd.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,7 +20,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -33,7 +30,9 @@ public class Home_Fragment extends Fragment {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     private String usuarioID;
-    private String data_dum;
+    private int dia_dum, mes_dum, ano_dum;
+    private String semanas_ex;
+
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -44,35 +43,9 @@ public class Home_Fragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-
-
-    int data =Integer.parseInt(Sistemas.data_dum);
-    int [] dum_cal = new int[data];
-
-    int dia1 = dum_cal[0];
-    int dia2 = dum_cal[1];
-    int mes1 = dum_cal[3];
-    int mes2 = dum_cal[4];
-    int ano1 = dum_cal[6];
-    int ano2 = dum_cal[7];
-    int ano3 = dum_cal[8];
-    int ano4 = dum_cal[9];
-
-    String conv_dia = String.valueOf(dia1 +  dia2);
-    String conv_mes = String.valueOf(mes1 +  mes2);
-    String conv_ano = String.valueOf(ano1 +  ano2 + ano3 + ano4);
-
-
-
-
-//    LocalDateTime dataCadastro = LocalDateTime.of(ano, mes, dia, hora, minuto, segundos);
-//    LocalDateTime hoje = LocalDateTime.now();
-//    long dias = dataCadastro.until(hoje, ChronoUnit.DAYS);
-
     public Home_Fragment() {
 
     }
-
 
     public static Home_Fragment newInstance(String param1, String param2) {
         Home_Fragment fragment = new Home_Fragment();
@@ -95,18 +68,19 @@ public class Home_Fragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-
+        semana();
         usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-
         DatabaseReference reference = database.getReference().child("usuarios").child(usuarioID);
+
+        tv_dia = getView().findViewById(R.id.tv_dia);
+
+        String dia_dum = String.valueOf(reference.child("dia_dum"));
 
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                String dum = snapshot.child("dum").getValue(String.class);
-
-                Sistemas.data_dum = dum;
+//                tv_dia.setText(snapshot.child("dia_dum").getValue(int.class));
 
             }
 
@@ -120,15 +94,25 @@ public class Home_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        tv_dia = getView().findViewById(R.id.tv_dia);
-        tv_dia.setText(conv_dia);
-
-        tv_mes = getView().findViewById(R.id.tv_mes);
-        tv_mes.setText(conv_mes);
-
-        tv_ano = getView().findViewById(R.id.tv_ano);
-        tv_ano.setText(conv_ano);
 
         return inflater.inflate(R.layout.fragment_home_, container, false);
+    }
+
+
+    public void semana() {
+
+        u = new Usuario();
+        int ano = u.getAno_dum();
+        int mes = u.getMes_dum();
+        int dia = u.getDia_dum();
+
+        LocalDateTime dataCadastro = LocalDateTime.of(ano, mes, dia, 0, 0, 0);
+        LocalDateTime hoje = LocalDateTime.now();
+        long dias = dataCadastro.until(hoje, ChronoUnit.DAYS);
+
+        String semana_q = String.valueOf(dias / 7);
+
+        semanas_ex = semana_q;
+
     }
 }
