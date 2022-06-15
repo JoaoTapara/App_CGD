@@ -114,13 +114,13 @@ public class Tela_Login extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser usuarioAtual = FirebaseAuth.getInstance().getCurrentUser();
-        if(usuarioAtual != null){
-            startActivity(new Intent(getApplicationContext(), Tela_Principal.class));
-        }
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        FirebaseUser usuarioAtual = FirebaseAuth.getInstance().getCurrentUser();
+//        if(usuarioAtual != null){
+//            startActivity(new Intent(getApplicationContext(), Tela_Principal.class));
+//        }
+//    }
 
 }

@@ -7,54 +7,61 @@
     android:background="@color/fundo_padrao"
     tools:context=".Fragments.Home_Fragment">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_txdia"
-        android:text="dia:"
-        android:textAlignment="center"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical" />
+        android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_dia"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:layout_marginTop="60dp"
-        android:orientation="vertical" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_semana"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:text="Idade Gestacional"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_semana" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_tx_mes"
-        android:text="Mes:"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:orientation="vertical" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_semana"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/txt_semana"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="60dp" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_mes"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:layout_marginTop="190dp"
-        android:orientation="vertical" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_semana2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="180dp"
+            android:text="Semanas"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_semana" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_txano"
-        android:text="ANO:"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
-        android:orientation="vertical" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_semana3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="350dp"
+            android:text="Data Provavel do Parto"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_semana" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_ano"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:layout_marginTop="320dp"
-        android:orientation="vertical"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dpp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/txt_semana"
+            android:layout_marginTop="308dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
-        />
+
+    </RelativeLayout>
 
 </FrameLayout>
