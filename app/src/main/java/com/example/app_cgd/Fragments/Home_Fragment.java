@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.app_cgd.DTO.Sistemas;
 import com.example.app_cgd.DTO.Usuario;
 import com.example.app_cgd.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,9 +38,10 @@ public class Home_Fragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    private TextView tv_dia, tv_mes, tv_ano;
+    private TextView tv_semana, tv_dpp;
 
     private Usuario u;
+    private Sistemas s;
     private String mParam1;
     private String mParam2;
 
@@ -72,7 +74,8 @@ public class Home_Fragment extends Fragment {
         usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
         DatabaseReference reference = database.getReference().child("usuarios").child(usuarioID);
 
-        tv_dia = getView().findViewById(R.id.tv_dia);
+        tv_semana = getView().findViewById(R.id.tv_semana);
+        tv_dpp = getView().findViewById(R.id.tv_dpp);
 
         String dia_dum = String.valueOf(reference.child("dia_dum"));
 
@@ -80,7 +83,12 @@ public class Home_Fragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-//                tv_dia.setText(snapshot.child("dia_dum").getValue(int.class));
+                String semana_final = Sistemas.semanas_ex;
+
+                String dpp_final = Usuario.dpp;
+
+                tv_semana.setText(semana_final);
+                tv_dpp.setText(dpp_final);
 
             }
 
@@ -112,7 +120,7 @@ public class Home_Fragment extends Fragment {
 
         String semana_q = String.valueOf(dias / 7);
 
-        semanas_ex = semana_q;
+        Sistemas.semanas_ex = semana_q;
 
     }
 }

@@ -6,12 +6,8 @@
     android:background="@color/fundo_padrao"
     tools:context=".Fragments.Info_Fragment">
 
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_nav_bar_info"/>
-
-
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </FrameLayout>
