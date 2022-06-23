@@ -76,7 +76,7 @@ public class Tela_Login extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
 
 
-                            startActivity(new Intent(Tela_Login.this,Tela_Principal.class));
+                            startActivity(new Intent(Tela_Login.this,Tela_Principal_P.class));
 
                         } else {
 
@@ -119,7 +119,7 @@ public class Tela_Login extends AppCompatActivity {
 //        super.onStart();
 //        FirebaseUser usuarioAtual = FirebaseAuth.getInstance().getCurrentUser();
 //        if(usuarioAtual != null){
-//            startActivity(new Intent(getApplicationContext(), Tela_Principal.class));
+//            startActivity(new Intent(getApplicationContext(), Tela_Principal_P.class));
 //        }
 //    }
 
