@@ -7,28 +7,61 @@
     android:background="@color/fundo_padrao"
     tools:context=".Tela_Principal">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:navGraph="@navigation/nav_main"/>
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_semana"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:text="Idade Gestacional"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_semana" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_semana"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/txt_semana"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="60dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_semana2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="180dp"
+            android:text="Semanas"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_semana" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_semana3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="350dp"
+            android:text="Data Provavel do Parto"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_semana" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dpp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/txt_semana"
+            android:layout_marginTop="308dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="20dp" />
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        style="@style/Widget.App.BottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_navigation_menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-         />
-
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
