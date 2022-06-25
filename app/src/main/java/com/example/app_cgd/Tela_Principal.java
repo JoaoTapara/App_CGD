@@ -34,12 +34,8 @@ public class Tela_Principal extends DrawerBase {
     public static String id_user;
     private ActivityTelaPrincipalBinding binding;
 
-    private NavHostFragment navHostFragment;
-    private NavController navController;
 
 
-
-    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +45,6 @@ public class Tela_Principal extends DrawerBase {
 
         Iniciacomponetes();
         semana();
-
-
 
         DatabaseReference reference = database.getReference().child("usuarios").child(usuarioID);
 
@@ -67,7 +61,6 @@ public class Tela_Principal extends DrawerBase {
 
             }
         });
-
     }
 
     public void semana() {
@@ -91,27 +84,19 @@ public class Tela_Principal extends DrawerBase {
                 tv_semana.setText(semana_q);
 
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
-
     }
-
 
     private void Iniciacomponetes(){
 
         usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-
-
         tv_dpp = findViewById(R.id.tv_dpp);
         tv_semana = findViewById(R.id.tv_semana);
 
-
-
     }
-
 
 }
