@@ -6,13 +6,13 @@
         <item
             android:id="@+id/nav_favoritos"
             android:icon="@drawable/ic_turned"
-            android:title="Favoritos"
+            android:title="Cartão"
             />
 
         <item
             android:id="@+id/nav_pdf"
             android:icon="@drawable/ic_baseline"
-            android:title="PDF"
+            android:title="Sintomas"
             />
 
         <item

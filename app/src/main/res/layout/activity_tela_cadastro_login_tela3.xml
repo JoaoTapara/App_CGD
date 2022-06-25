@@ -34,10 +34,10 @@
         android:textColor="@color/black"
         android:padding="10dp"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/tv_idade" />
+        app:layout_constraintBottom_toTopOf="@+id/tv_id_idade" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_idade"
+        android:id="@+id/tv_id_idade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="35dp"

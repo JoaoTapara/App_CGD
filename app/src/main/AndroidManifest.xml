@@ -12,9 +12,6 @@
         android:theme="@style/Theme.App_CGD"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".FavoritosActivity"
-            android:exported="false" />
-        <activity
             android:name=".main_drawer_header"
             android:exported="false" />
         <activity
@@ -22,6 +19,9 @@
             android:exported="false" />
         <activity
             android:name=".Tela_Cadastro_login"
+            android:exported="false" />
+        <activity
+            android:name=".Tela_Catao"
             android:exported="false" />
         <activity
             android:name=".Tela_Cadastro_login_tela2"

@@ -42,11 +42,10 @@ public class DrawerBase extends AppCompatActivity implements NavigationView.OnNa
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getApplicationContext(), Tela_Login.class));
                 break;
-//            case R.id.nav_favoritos:
-//                FirebaseAuth.getInstance().signOut();
-//                startActivity(new Intent(getApplicationContext(), FavoritosActivity.class));
-//                break;
-//            case R.id.nav_pdf:
+            case R.id.nav_favoritos:
+                startActivity(new Intent(getApplicationContext(), Tela_Catao.class));
+                break;
+            //case R.id.nav_pdf:
 //                FirebaseAuth.getInstance().signOut();
 //                startActivity(new Intent(getApplicationContext(), Tela_PDF.class));
 //                break;
