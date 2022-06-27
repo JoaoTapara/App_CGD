@@ -12,6 +12,12 @@
         android:theme="@style/Theme.App_CGD"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Tela_Cadastra_sintomas"
+            android:exported="false" />
+        <activity
+            android:name=".Tela_Sintomas"
+            android:exported="false" />
+        <activity
             android:name=".main_drawer_header"
             android:exported="false" />
         <activity

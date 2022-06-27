@@ -24,8 +24,7 @@
             android:id="@+id/nav_deslogar"
             android:title="Deslogar"
             />
-
-
+        
     </group>
 
 </menu>
