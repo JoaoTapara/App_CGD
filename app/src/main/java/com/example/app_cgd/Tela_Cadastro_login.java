@@ -87,6 +87,7 @@ public class Tela_Cadastro_login extends AppCompatActivity {
             snackbar.show();
 
         }else if(!senha.equals(senha_conf)){
+
             Snackbar snackbar = Snackbar.make(v, mensagens[3], Snackbar.LENGTH_SHORT);
             snackbar.setBackgroundTint(Color.WHITE);
             snackbar.setTextColor(Color.BLACK);

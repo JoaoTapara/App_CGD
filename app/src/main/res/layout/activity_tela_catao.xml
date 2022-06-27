@@ -2,72 +2,184 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_id_teste"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tela_Catao"
-    android:background="@color/fundo_padrao">
+    android:background="@color/fundo_padrao"
+    tools:context=".Tela_Catao">
 
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tv_id_peso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Peso" />
-
-        <TextView
-            android:id="@+id/tv_id_dum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Dum" />
-
-        <TextView
-            android:id="@+id/tv_id_telefone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Telefone" />
-
-        <TextView
-            android:id="@+id/tv_id_dpp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Dpp" />
-
-        <TextView
-            android:id="@+id/tv_id_nome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Nome" />
-
-        <TextView
-            android:id="@+id/tv_id_idade"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Idade" />
-
-        <TextView
-            android:id="@+id/tv_id_cpf"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="CPF" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_id_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Email" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv_id_peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Peso" />
+
+            <TextView
+                android:id="@+id/tv_id_dum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Dum" />
+
+            <TextView
+                android:id="@+id/tv_id_telefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Telefone" />
+
+            <TextView
+                android:id="@+id/tv_id_dpp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Dpp" />
+
+            <TextView
+                android:id="@+id/tv_id_nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Nome" />
+
+            <TextView
+                android:id="@+id/tv_id_idade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Idade" />
+
+            <TextView
+                android:id="@+id/tv_id_cpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="CPF" />
+
+            <TextView
+                android:id="@+id/tv_id_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Email" />
+
+            <TextView
+                android:id="@+id/tv_id_sangue_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="sangue " />
+
+            <TextView
+                android:id="@+id/tv_id_altura_au"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Au" />
+
+            <TextView
+                android:id="@+id/tv_id_semana_au"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Au" />
+
+            <TextView
+                android:id="@+id/tv_id_hepat_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Hepatite B" />
+
+            <TextView
+                android:id="@+id/tv_id_hepat_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Hepatite C" />
+
+            <TextView
+                android:id="@+id/tv_id_toxop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Toxoplasmose" />
+
+            <TextView
+                android:id="@+id/tv_id_hiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="HIV" />
+
+            <TextView
+                android:id="@+id/tv_id_fcf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="FCF" />
+
+            <TextView
+                android:id="@+id/tv_id_nome_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="nome M" />
+
+            <TextView
+                android:id="@+id/tv_id_telefone_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="telefone M" />
+
+            <TextView
+                android:id="@+id/tv_id_crm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="CRM" />
+
+            <TextView
+                android:id="@+id/tv_id_pa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="PA" />
+
+            <TextView
+                android:id="@+id/tv_id_h_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Vac_hepat" />
+
+            <TextView
+                android:id="@+id/tv_id_i"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Vac_influ" />
+
+            <TextView
+                android:id="@+id/tv_id_t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Vac_tripc" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

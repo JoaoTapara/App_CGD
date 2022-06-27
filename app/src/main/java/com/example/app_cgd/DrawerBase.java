@@ -38,17 +38,20 @@ public class DrawerBase extends AppCompatActivity implements NavigationView.OnNa
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         drawerLayout.closeDrawer(GravityCompat.START);
         switch (item.getItemId()){
+
             case R.id.nav_deslogar:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getApplicationContext(), Tela_Login.class));
                 break;
+
             case R.id.nav_favoritos:
                 startActivity(new Intent(getApplicationContext(), Tela_Catao.class));
                 break;
-            //case R.id.nav_pdf:
-//                FirebaseAuth.getInstance().signOut();
-//                startActivity(new Intent(getApplicationContext(), Tela_PDF.class));
-//                break;
+
+            case R.id.nav_pdf:
+                startActivity(new Intent(getApplicationContext(), Tela_Sintomas.class));
+                break;
+
 //            case R.id.nav_configuracao:
 //                FirebaseAuth.getInstance().signOut();
 //                startActivity(new Intent(getApplicationContext(), Tela_Configuracao.class));
