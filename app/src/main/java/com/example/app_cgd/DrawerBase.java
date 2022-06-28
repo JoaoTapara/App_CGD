@@ -39,23 +39,26 @@ public class DrawerBase extends AppCompatActivity implements NavigationView.OnNa
         drawerLayout.closeDrawer(GravityCompat.START);
         switch (item.getItemId()){
 
+            case R.id.nav_home:
+                startActivity(new Intent(getApplicationContext(), Tela_Principal.class));
+                break;
+
             case R.id.nav_deslogar:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getApplicationContext(), Tela_Login.class));
                 break;
 
-            case R.id.nav_favoritos:
+            case R.id.nav_cartao:
                 startActivity(new Intent(getApplicationContext(), Tela_Catao.class));
                 break;
 
-            case R.id.nav_pdf:
+            case R.id.nav_sintomas:
                 startActivity(new Intent(getApplicationContext(), Tela_Sintomas.class));
                 break;
 
-//            case R.id.nav_configuracao:
-//                FirebaseAuth.getInstance().signOut();
-//                startActivity(new Intent(getApplicationContext(), Tela_Configuracao.class));
-//                break;
+            case R.id.nav_cad_sintomas:
+                startActivity(new Intent(getApplicationContext(), Tela_Cadastra_sintomas.class));
+                break;
         }
         finish();
         return false;

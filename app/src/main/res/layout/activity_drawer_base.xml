@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".DrawerBase"
     tools:openDrawer="start"
+
     android:fitsSystemWindows="true">
 
     <include layout="@layout/content_layout"

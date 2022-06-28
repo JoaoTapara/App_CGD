@@ -4,16 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fundo_padrao"
     tools:context=".Tela_Cadastra_sintomas">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_humor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="65dp"
+        android:textColor="@color/black"
+        android:text="Como você esta hoje"
+        android:textSize="16dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="80dp"
         android:layout_marginEnd="80dp"
+        android:background="@color/white"
         android:layout_marginBottom="80dp"
+        android:layout_below="@id/txt_humor"
         android:hint="Humor"
         android:id="@+id/spn1">
 
@@ -25,6 +38,17 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_sintomas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spn1"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:textColor="@color/black"
+        android:text="O que você esta sentindo"
+        android:textSize="16dp" />
+
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
         android:layout_width="match_parent"
@@ -32,10 +56,10 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="70dp"
         android:hint="Sintomas"
         android:id="@+id/spn2"
-        android:layout_below="@id/spn1">
+        android:layout_below="@id/txt_sintomas">
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
@@ -44,6 +68,17 @@
             android:inputType="none"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_outros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_below="@id/spn2"
+        android:text="Opcional"
+        android:textColor="@color/black"
+        android:textSize="16dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
@@ -55,7 +90,7 @@
         android:layout_marginBottom="80dp"
         android:hint="Outro"
         android:id="@+id/spn3"
-        android:layout_below="@id/spn2">
+        android:layout_below="@id/txt_outros">
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
