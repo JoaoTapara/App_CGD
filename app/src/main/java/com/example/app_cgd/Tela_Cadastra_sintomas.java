@@ -13,18 +13,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.app_cgd.DTO.Sintomas;
+import com.example.app_cgd.databinding.ActivityTelaPrincipalBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Tela_Cadastra_sintomas extends AppCompatActivity {
+public class Tela_Cadastra_sintomas extends DrawerBase {
 
 
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("sintomas");
     private Button btn_cadas_sintomas;
     private String humor, sintomas, outros;
     private Sintomas s;
+
+    private ActivityTelaPrincipalBinding binding;
 
 
     @Override

@@ -10,7 +10,6 @@
     <item
         android:id="@+id/nav_home"
         android:enabled="true"
-        android:icon="@drawable/ic_nav__bar_home_24"
         android:title="@string/nav_home"/>
 
     <item

@@ -4,27 +4,31 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_favoritos"
-            android:icon="@drawable/ic_turned"
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"
+            />
+        <item
+            android:id="@+id/nav_cartao"
+            android:icon="@drawable/ic_baseline_article_24"
             android:title="Cartão"
             />
-
         <item
-            android:id="@+id/nav_pdf"
+            android:id="@+id/nav_cad_sintomas"
+            android:icon="@drawable/ic_add_box_"
+            android:title="Cadastrar sintomas"
+            />
+        <item
+            android:id="@+id/nav_sintomas"
             android:icon="@drawable/ic_baseline"
             android:title="Sintomas"
             />
-
-        <item
-            android:id="@+id/nav_configuracao"
-            android:icon="@drawable/ic_settings"
-            android:title="Configurações"
-            />
         <item
             android:id="@+id/nav_deslogar"
+            android:icon="@drawable/ic_baseline_login_24"
             android:title="Deslogar"
             />
-        
+
     </group>
 
 </menu>
