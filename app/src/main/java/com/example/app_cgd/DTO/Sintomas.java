@@ -1,7 +1,7 @@
 package com.example.app_cgd.DTO;
 
 public class Sintomas {
-    String humor, sintomas, outros;
+    String  humor, sintomas, outros;
 
     public Sintomas() {
     }

@@ -1,10 +1,13 @@
 package com.example.app_cgd;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import com.example.app_cgd.DTO.Sintomas;
@@ -28,25 +31,39 @@ public class Tela_Sintomas extends DrawerBase {
     SintomasAdapter adapter;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("sintomas");
 
+    String userat, id_s;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityTelaSintomasBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         IniciarComponentes();
+
         FirebaseUser userId = FirebaseAuth.getInstance().getCurrentUser();
         String usuarioAtual = userId.getUid();
+
+        userat = usuarioAtual;
+
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         list = new ArrayList<Sintomas>();
         adapter = new SintomasAdapter(this, list);
         recyclerView.setAdapter(adapter);
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
+        itemTouchHelper.attachToRecyclerView(recyclerView);
+
         databaseReference.child(usuarioAtual).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Sintomas s = dataSnapshot.getValue(Sintomas.class);
                     list.add(s);
+                    String id_lista = dataSnapshot.getKey();
+                    id_s = id_lista;
                 }
                 adapter.notifyDataSetChanged();
             }
@@ -60,6 +77,41 @@ public class Tela_Sintomas extends DrawerBase {
 
 
     }
+
+    ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT ) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(Tela_Sintomas.this);
+            builder.setTitle("Deletar");
+            builder.setMessage("Deseja excluir este sintoma?");
+            builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    FirebaseDatabase.getInstance().getReference().child("sintomas").child(userat).child(id_s).removeValue();
+
+
+
+                }
+            });
+            builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    adapter.notifyItemChanged(viewHolder.getAdapterPosition());
+
+                }
+            });
+            builder.show();
+
+        }
+    };
 
     private void IniciarComponentes(){
         recyclerView = findViewById(R.id.recyclerView);
