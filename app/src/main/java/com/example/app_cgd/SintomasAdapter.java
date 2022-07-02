@@ -54,6 +54,7 @@ public class SintomasAdapter extends RecyclerView.Adapter<SintomasAdapter.MyView
         return lSintomas.size(); // desse modo fica mais facil por estar pegando o tamanho q vc ja criou
     }
 
+
     //como se fosse o iniciar componetes
     public class MyViewHolder extends RecyclerView.ViewHolder {
 

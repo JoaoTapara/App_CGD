@@ -48,17 +48,17 @@ android:layout_height="wrap_content">
                 android:layout_marginLeft="10dp"/>
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/id_outros"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/id_sintomas"
-                android:id="@+id/id_outros"
-                android:maxWidth="200dp"
-                android:hint="Outros"
-                android:textColorHint="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"/>
+                android:hint=""
+                android:maxWidth="200dp"
+                android:textColorHint="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
