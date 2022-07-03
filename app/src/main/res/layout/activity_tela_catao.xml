@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tv_id_teste"
@@ -18,168 +18,797 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_id_peso"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_cartao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:bufferType="spannable"
+                android:freezesText="false"
+                android:text="CARTÃO GESTANTE"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/container_1"
+                android:layout_width="match_parent"
+                android:layout_height="670dp"
+                android:layout_below="@id/txt_cartao"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/teste"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_nome_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Nome:"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_id_nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txt_nome_g"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edt_cartao"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:text="Nome_pessoa"
+                    android:textSize="17dp" />
+
+                <LinearLayout
+                    android:id="@+id/id_peso_idad"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_idade_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Idade:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_idade"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/txt_idade_g"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="Idade_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_peso_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tv_id_idade"
+                        android:layout_marginLeft="10dp"
+
+                        android:layout_marginTop="10dp"
+                        android:text="Peso:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_peso"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/txt_peso_g"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="Peso_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_telefone_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Telefone:"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_id_telefone"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txt_telefone_g"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edt_cartao"
+                    android:padding="8dp"
+                    android:text="Telefone_pessoa"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_cpf_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="CPF:"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_id_cpf"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txt_cpf_g"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edt_cartao"
+                    android:padding="8dp"
+                    android:text="cpf_pessoa"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+                <LinearLayout
+                    android:id="@+id/id_dum_dpp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_dum_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Dum:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_dpp_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Dpp:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_dumtv_dpptv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_dum"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="Dum_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_dpp"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="Dpp_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_email_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Email:"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_id_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txt_email_g"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edt_cartao"
+                    android:padding="8dp"
+                    android:text="Email_pessoa"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_sangue_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Tipo Sangue:"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_id_sangue_c"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txt_sangue_g"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edt_cartao"
+                    android:padding="8dp"
+                    android:text="Sangue_pessoa"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_pres_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Pressão arterial:"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_id_pa"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txt_pres_g"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edt_cartao"
+                    android:padding="8dp"
+                    android:text="Pressao_pessoa"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_au_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Altura uterina"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/id_aual_ausm"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_altura_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Altura:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_altura_au"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="Altura_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_semana_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tv_id_idade"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Semana:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_semana_au"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="Peso_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_cartao_exames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:bufferType="spannable"
+                android:freezesText="false"
+                android:text="EXAMES GESTANTE"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/container_2"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_below="@id/txt_cartao"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/teste"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/id_hpt"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_hptb_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Hepatite B:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_hepat_b"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="Hptb_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_hptc_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tv_id_idade"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Hepatite C:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_hepat_c"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="Htpc_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_ex2"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_toxoplas_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Toxoplasmose:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_toxop"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="Toxoplas_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_hiv_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="HIV:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_hiv"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="Htpc_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_ex3"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_fcf_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="FCF:"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_id_fcf"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edt_cartao"
+                        android:padding="8dp"
+                        android:text="FCF_pessoa"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_vacina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:bufferType="spannable"
+                android:freezesText="false"
+                android:text="VACINAS GESTANTE"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/container_3"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@id/txt_cartao"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/teste"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/id_V1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_v1_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Vacina Hepatite B:"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_id_h_b"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edt_cartao"
+                    android:padding="8dp"
+                    android:text="Hepat_pessoa"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_V2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_v2_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Vacina Influenza:"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_id_i"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edt_cartao"
+                    android:padding="8dp"
+                    android:text="Influenza_pessoa"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_V3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_v3_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Vacina Triplicebacteriana:"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_id_t"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edt_cartao"
+                    android:padding="8dp"
+                    android:text="Triplicebacteriana_pessoa"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_medico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:bufferType="spannable"
+                android:freezesText="false"
+                android:text="DADOS MEDICO"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/container_4"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_below="@id/txt_cartao"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/teste"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_nome_m"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Peso" />
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:text="Nome:"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_id_dum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Dum" />
-
-            <TextView
-                android:id="@+id/tv_id_telefone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Telefone" />
-
-            <TextView
-                android:id="@+id/tv_id_dpp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Dpp" />
-
-            <TextView
-                android:id="@+id/tv_id_nome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Nome" />
-
-            <TextView
-                android:id="@+id/tv_id_idade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Idade" />
-
-            <TextView
-                android:id="@+id/tv_id_cpf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="CPF" />
-
-            <TextView
-                android:id="@+id/tv_id_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Email" />
-
-            <TextView
-                android:id="@+id/tv_id_sangue_c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="sangue " />
-
-            <TextView
-                android:id="@+id/tv_id_altura_au"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Au" />
-
-            <TextView
-                android:id="@+id/tv_id_semana_au"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Au" />
-
-            <TextView
-                android:id="@+id/tv_id_hepat_b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Hepatite B" />
-
-            <TextView
-                android:id="@+id/tv_id_hepat_c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Hepatite C" />
-
-            <TextView
-                android:id="@+id/tv_id_toxop"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Toxoplasmose" />
-
-            <TextView
-                android:id="@+id/tv_id_hiv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="HIV" />
-
-            <TextView
-                android:id="@+id/tv_id_fcf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="FCF" />
-
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_id_nome_m"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="nome M" />
+                android:layout_height="40dp"
+                android:layout_below="@id/txt_nome_m"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edt_cartao"
+                android:padding="8dp"
+                android:text="Nome_medico"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_telefone_m"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:text="Telefone:"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_id_telefone_m"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="telefone M" />
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txt_telefone_m"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edt_cartao"
+                android:padding="8dp"
+                android:text="Telefone_medico"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_crm_m"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:text="CRM:"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_id_crm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="CRM" />
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txt_crm_m"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edt_cartao"
+                android:padding="8dp"
+                android:text="Telefone_medico"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+
+        </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_id_pa"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="PA" />
-
-            <TextView
-                android:id="@+id/tv_id_h_b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Vac_hepat" />
-
-            <TextView
-                android:id="@+id/tv_id_i"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Vac_influ" />
-
-            <TextView
-                android:id="@+id/tv_id_t"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Vac_tripc" />
-
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -3,6 +3,7 @@ package com.example.app_cgd;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -14,11 +15,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Tela_Catao extends DrawerBase {
+public class Tela_Catao extends AppCompatActivity {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     private String usuarioID;
-    private ActivityTelaCataoBinding binding;
+
 
     private TextView tv_id_nome, tv_id_idade, tv_id_peso, tv_id_dum, tv_id_dpp, tv_id_telefone, tv_id_email, tv_id_cpf,
             tv_id_sangue_c, tv_id_altura_au, tv_id_semana_au, tv_id_hepat_b, tv_id_hepat_c, tv_id_toxop, tv_id_hiv,
@@ -27,8 +28,7 @@ public class Tela_Catao extends DrawerBase {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityTelaCataoBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_tela_catao);
 
         Iniciacomponetes();
         ChamadadosDaGestante();
