@@ -15,7 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Tela_Catao extends AppCompatActivity {
+public class Tela_Catao extends DrawerBase {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     private String usuarioID;
@@ -25,10 +25,13 @@ public class Tela_Catao extends AppCompatActivity {
             tv_id_sangue_c, tv_id_altura_au, tv_id_semana_au, tv_id_hepat_b, tv_id_hepat_c, tv_id_toxop, tv_id_hiv,
             tv_id_fcf, tv_id_nome_m, tv_id_telefone_m, tv_id_crm, tv_id_pa, tv_id_h_b, tv_id_i, tv_id_t;
 
+    private ActivityTelaCataoBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_catao);
+        binding = ActivityTelaCataoBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         Iniciacomponetes();
         ChamadadosDaGestante();
