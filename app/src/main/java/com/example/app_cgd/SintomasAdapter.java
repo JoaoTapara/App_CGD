@@ -39,11 +39,12 @@ public class SintomasAdapter extends RecyclerView.Adapter<SintomasAdapter.MyView
 
     //onde vou pegar e jogar na tela ,onde se manipula a lista
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         Sintomas s = lSintomas.get(position);
         holder.tv_humor.setText(s.getHumor());
         holder.tv_sintomas.setText(s.getSintomas());
         holder.tv_outros.setText(s.getOutros());
+
 
     }
 
@@ -52,6 +53,11 @@ public class SintomasAdapter extends RecyclerView.Adapter<SintomasAdapter.MyView
     @Override
     public int getItemCount() {
         return lSintomas.size(); // desse modo fica mais facil por estar pegando o tamanho q vc ja criou
+    }
+
+
+    public void notifyItemRemoved(String id_s) {
+        return;
     }
 
 

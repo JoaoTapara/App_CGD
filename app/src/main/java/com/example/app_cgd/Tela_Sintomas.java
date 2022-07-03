@@ -2,16 +2,15 @@ package com.example.app_cgd;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.app_cgd.DTO.Sintomas;
-import com.example.app_cgd.databinding.ActivityTelaCataoBinding;
 import com.example.app_cgd.databinding.ActivityTelaSintomasBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -31,7 +30,9 @@ public class Tela_Sintomas extends DrawerBase {
     SintomasAdapter adapter;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("sintomas");
 
-    String userat, id_s;
+    String userat;
+    String id_s;
+    DatabaseReference position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class Tela_Sintomas extends DrawerBase {
         adapter = new SintomasAdapter(this, list);
         recyclerView.setAdapter(adapter);
 
+
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
 
@@ -62,8 +64,10 @@ public class Tela_Sintomas extends DrawerBase {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Sintomas s = dataSnapshot.getValue(Sintomas.class);
                     list.add(s);
-                    String id_lista = dataSnapshot.getKey();
-                    id_s = id_lista;
+
+                    id_s = dataSnapshot.getKey();
+//                    position = dataSnapshot.getRef(position);
+
                 }
                 adapter.notifyDataSetChanged();
             }
@@ -94,10 +98,15 @@ public class Tela_Sintomas extends DrawerBase {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
 
+
+                    startActivity(new Intent(getApplicationContext(), Tela_Sintomas.class));
+
                     FirebaseDatabase.getInstance().getReference().child("sintomas").child(userat).child(id_s).removeValue();
 
 
 
+//                    int position = viewHolder.getAdapterPosition();
+//                    adapter.notifyItemRemoved(id_s);
                 }
             });
             builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
