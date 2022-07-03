@@ -1,7 +1,5 @@
 package com.example.app_cgd;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,11 +7,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
 import com.example.app_cgd.DTO.Sintomas;
-import com.example.app_cgd.databinding.ActivityTelaPrincipalBinding;
+import com.example.app_cgd.databinding.ActivityTelaCadastraSintomasBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -27,13 +26,15 @@ public class Tela_Cadastra_sintomas extends DrawerBase {
     private String humor, sintomas, outros;
     private Sintomas s;
 
-    private ActivityTelaPrincipalBinding binding;
+    private ActivityTelaCadastraSintomasBinding binding;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_cadastra_sintomas);
+        binding = ActivityTelaCadastraSintomasBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
 
         IniciaComponentes();
 
