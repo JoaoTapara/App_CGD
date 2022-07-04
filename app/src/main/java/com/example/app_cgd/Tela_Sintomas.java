@@ -90,23 +90,17 @@ public class Tela_Sintomas extends DrawerBase {
 
         @Override
         public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-
+            list = new ArrayList<Sintomas>();
+            adapter.getlSintomas().remove(viewHolder.getAdapterPosition());
+            adapter.notifyItemRemoved(viewHolder.getAdapterPosition());
             AlertDialog.Builder builder = new AlertDialog.Builder(Tela_Sintomas.this);
             builder.setTitle("Deletar");
             builder.setMessage("Deseja excluir este sintoma?");
             builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-
-
-                    startActivity(new Intent(getApplicationContext(), Tela_Sintomas.class));
-
                     FirebaseDatabase.getInstance().getReference().child("sintomas").child(userat).child(id_s).removeValue();
 
-
-
-//                    int position = viewHolder.getAdapterPosition();
-//                    adapter.notifyItemRemoved(id_s);
                 }
             });
             builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
